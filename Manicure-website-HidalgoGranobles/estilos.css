@@ -24,6 +24,14 @@ nav ul li a{
     color: #000;
     margin: 20px;
     font-weight: 600;
+    animation-name: secciones_nombres;
+    animation-duration: 2s;
+}
+
+@keyframes secciones_nombres{
+    100%{
+        color: #ff006d;
+    }
 }
 
 nav ul li a:hover{
@@ -162,6 +170,20 @@ footer .cajas__footer #lista__footer li{
     -webkit-text-fill-color: transparent;
     font-size: 60px;
     font-weight: 600;
+    animation-name: luz;
+    animation-duration: 2s;
+}
+
+@keyframes luz{
+    0%{
+        font-size: 20px;
+    }
+    50%{
+        font-size: 45px;
+    }
+    100%{
+        font-size: 60px;
+    }
 }
 
 /* ############################# ESTILOS INDEX ####################################*/
@@ -173,6 +195,24 @@ footer .cajas__footer #lista__footer li{
     margin: 80px 50px 150px 50px;
     align-items: center;
     justify-content: center;
+
+}
+
+/* ANIMACIONES */
+
+@keyframes animacion-1{
+    0%{
+        width: 30%;
+        height: 400px;
+    }
+    50%{
+        width: 40%;
+        height: 500px;
+    }
+    100%{
+        width: 50%;
+        height: 500px;
+    }
 }
 
 .caja__inicial{
@@ -195,6 +235,8 @@ footer .cajas__footer #lista__footer li{
     width: 50%;
     height: 500px;
     object-fit: cover;
+    animation-name: animacion-1;
+    animation-duration: 2s;
 }
 
 #boton__saber__mas{
