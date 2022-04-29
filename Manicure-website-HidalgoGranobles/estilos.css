@@ -1,0 +1,710 @@
+/* ################################## Estilos Generales para todas las paginas #######################################*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:  rgb(246,109,158);
+    background: linear-gradient(0deg, rgba(246,109,158,1) 0%, rgba(255,167,200,1) 31%, rgba(255,248,251,1) 100%);;
+}
+
+/* Estilos de la barra de navegacion */
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: center;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #000;
+    margin: 20px;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid #000;
+    color: #ff006d;
+    transition: 0.1s;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 30px;
+    font-family:  'EB Garamond', serif;
+    text-align: end;
+    margin: 10px;
+}
+
+/* Estilos Main */
+
+main{
+    font-family: 'Playfair Display', serif;
+}
+
+/* Estilos Footer */
+
+footer{
+    width: 100%;
+    height: 320px;
+    margin-top: 150px;
+    background: #7C436F;
+}
+
+footer .caja__contenedor__footer{
+    width: 100%;
+    height: 300px;
+    font-family: 'Playfair Display', serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: 
+    "div1 div2 div3";
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 300px;
+}
+
+#cajas__footer-margin{
+    grid-area: div1;
+    text-align: center;
+}
+
+#cajas__footer-size{
+    grid-area: div2;
+    text-align: center;
+}
+
+#caja__footer3{
+    grid-area: div3;
+}
+
+footer .caja__contenedor__footer .cajas__footer h4{
+    margin-top: 10px;
+}
+
+#footer__icono__whatsaap{
+    font-size: 40px;
+    margin: 10px;
+}
+
+#footer__icono__whatsaap{
+    margin: 20px;
+}
+
+#cajas__footer-size h3{
+    font-size: 30px;
+    color: #cdb4db;
+}
+
+#cajas__footer-size h4{
+    font-size: 20px;
+    color: #cdb4db;
+    margin-top: 30px;
+}
+
+#lista__footer{
+    margin: 10px;
+    list-style: none;
+}
+
+footer .cajas__footer #lista__footer a{
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+footer .cajas__footer #lista__footer li{
+    margin: 10px 0px 10px 140px;
+}
+
+/* Estilos Contenedor */
+
+#contenedor{
+    display: grid;
+}
+
+/* ############################################################ */
+
+/* Estilos h1 */
+
+#contenedor__icono_whatsaap{
+    position: absolute;
+}
+
+#contenedor__icono_whatsaap #icono__whatsaap{
+    font-size: 50px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.contenedor__titulo{
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    display: flex;
+}
+
+.contenedor__nombre{
+    font-family:  'EB Garamond', serif;
+    margin: auto;
+    margin-top: -3px;
+}
+
+.contenedor__nombre a{
+    text-decoration: none;
+    background: linear-gradient(#ff006d, #ffbad4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+/* ############################# ESTILOS INDEX ####################################*/
+
+/* Estilos  Section Presentacion */
+
+.contenedor__secction__presentacion{
+    display: flex;
+    margin: 80px 50px 150px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.caja__inicial{
+    width: 40%;
+    height: 400px;
+    background: #FFFFFF;
+    text-align: center;
+    box-shadow: 8px 7px 9px 4px rgba(0,0,0,0.47);
+}
+
+.caja__inicial h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+    position: relative;
+    top: 100px;
+}
+
+#imagen__inicial{
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+}
+
+#boton__saber__mas{
+    background-color: #eabaf6;
+    padding: 15px;
+    position: relative;
+    top: 145px;
+    border-radius: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+}
+
+/*  Estilos section descripcion */
+
+#contenedor__section__descripcion{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    justify-content: center;
+    background-color: #b7b6ff;
+    margin: auto;
+}
+
+#contenedor__imagen__descripcion{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagen__descripcion{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 200px;
+    margin-left: 20px;
+}
+
+#caja{
+    width: 50%;
+    height: 100%;
+    margin-left: 50px;
+}
+
+#contenedor__h2__p{
+    position: relative;
+    top: 100px;
+}
+
+#contenedor__section__descripcion #caja p{
+    margin: 0px 50px 0px 50px;
+}
+
+#contenedor__section__descripcion #caja h2{
+    margin: 30px;
+    padding-bottom:  15px;
+    text-align: center;
+    color: #ff006d;
+    border-bottom: #000 solid 2px ;
+}
+
+/* Estilos Section Cuadros  */
+
+.cuadros__contenedor{
+    margin-bottom: 150px;
+    margin-top: 150px;
+    width: 100%;
+    height: 650px;
+    background-color: #ddbdfc;
+    padding-top: 60px;
+}
+
+.cuadros{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 580px;
+}
+
+.cuadro{
+    width: 280px;
+    height: 380px;
+    background-color: #FFAFCC;
+    border: 5px black solid;
+    border-radius: 25px;
+}
+
+.h2__cuadro{
+    position: relative;
+    font-size: 35px;
+    text-align: center;
+}
+
+/* #######################################  Estilos Pagina Servicios ########################################## */
+
+#servicios__h1{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.servicios__contenedor{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#servicio__imagen1{
+    background-image: url(./imagenes/imagen_servicio.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 30%;
+    border-radius: 200px;
+}
+
+.contenedor__servicio1{
+    text-align: center;
+    width: 50%;
+    margin-left: 120px;
+    background-color: #DC64C1;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.contenedor__servicio1 h2{
+    margin-bottom: 20px;
+}
+
+.contenedor__servicio2{
+    text-align: center;
+    width: 50%;
+    margin-right: 150px;
+    background-color: #BDE0FE;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.contenedor__servicio2 h2{
+    margin-bottom: 20px;
+}
+
+#servicio__imagen2{
+    background-image: url(./imagenes/galeria2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 30%;
+    border-radius: 200px;
+}
+
+#servicio__imagen3{
+    background-image: url(./imagenes/galeria1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 30%;
+    border-radius: 200px;
+}
+
+#servicio__imagen4{
+    background-image: url(./imagenes/galeria6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    width: 30%;
+    border-radius: 200px;
+}
+
+/* #######################################  Estilos Pagina Contacto ########################################## */
+
+#contacto__h1{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contacto__contenedor{
+    width: 80%;
+    height: 100px;
+    background-color: #b7b6ff;
+    margin: 50px auto;
+    border: 2px #000 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto__contenedor div p{
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.contacto__contenedor div i{
+    font-size: 50px;
+    margin-right: 40px;
+}
+
+#contacto__form{
+    width: 40%;
+    height: 400px;
+    background-color: #ff70a5;
+    text-align: center;
+    margin: 150px auto;
+}
+
+#contacto__form__h2{
+    margin-top: 50px;
+}
+
+.contacto__label{
+    margin-top: 20px;
+}
+
+.contacto__form {
+    width: 400px;
+    background-color: #ff70a5;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    font-family: 'calibri';
+    color: white;
+}
+
+.contacto__form h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+button{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #b7b6ff;
+}
+
+.contacto__input {
+    width: 100%;
+    background: #DC64C1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.contacto__form p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.contacto__form a {
+    color: white;
+    text-decoration: none;
+}
+
+.contacto__form a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* #################################### Estilos Galeria ################################## */
+
+.galeria__contenedor__h1{
+    width: 50%;
+    margin: auto;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #000;
+}
+
+.galeria__contenedor__h1 h1{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 50px;
+    background: linear-gradient(#ff006d, #ffbad4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.galeria__section__presentacion{
+    position: relative;
+    width: 100%;
+    height: 620px;
+    margin-top: 80px;
+    box-sizing: border-box;
+}
+
+#galeria__fondo__decoracion{
+    width: 100%;
+    height: 250px;
+    background-color: #A86BFF;
+}
+
+.contenedor__galeria__grid{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "img1 img2 img3 img4";
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: 300px;
+    grid-column-gap: 35px;
+    position: relative;
+    bottom: 200px;
+    box-sizing: border-box;
+}
+
+#galeria__imagen1{
+    grid-area: img1;
+    background-image: url(./imagenes/galeria1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria__imagen2{
+    grid-area: img2;
+    background-image: url(./imagenes/galeria2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria__imagen3{
+    grid-area: img3;
+    background-image: url(./imagenes/galeria3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#galeria__imagen4{
+    grid-area: img4;
+    background-image: url(./imagenes/galeria4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.galeria__section__presentacion article{
+    width: 70%;
+    height: 180px; 
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #FFCADE;
+    font-weight:900;
+    position: absolute;
+    bottom: 150px;
+    left: 200px;
+    box-sizing: border-box;
+}
+
+.galeria__section__presentacion article a{
+    text-decoration: none;
+    color: #fff;
+    background-color: #A86BFF;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.galeria__article__contenedor{
+    position: relative;
+}
+
+.galeria__section__contenedor{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #A86BFF;
+}
+
+.galeria__section__contenedor h2{
+    padding: 20px;
+    font-size: 45px;
+}
+
+.contenedor__grid__divs{
+    width: 100%;
+    height: auto;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 
+    "img5 img6 img7"
+    "img8 img9 img10"
+    "img11 img12 img14";
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 300px 300px 300px;
+    grid-gap: 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+
+#galeria__imagen5{
+    grid-area: img5;
+    background-image: url(./imagenes/galeria5.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen6{
+    grid-area: img6;
+    background-image: url(./imagenes/galeria6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen7{
+    grid-area: img7;
+    background-image: url(./imagenes/galeria7.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen8{
+    grid-area: img8;
+    background-image: url(./imagenes/galeria8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen9{
+    grid-area: img9;
+    background-image: url(./imagenes/galeria9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen10{
+    grid-area: img10;
+    background-image: url(./imagenes/galeria10.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen11{
+    grid-area: img11;
+    background-image: url(./imagenes/galeria11.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen12{
+    grid-area: img12;
+    background-image: url(./imagenes/galeria12.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen13{
+    grid-area: img13;
+    background-image: url(./imagenes/galeria13.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#galeria__imagen14{
+    grid-area: img14;
+    background-image: url(./imagenes/galeria14.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.galeria__section__contenedor h2{
+    margin: 10px;
+    text-align: center;
+}
+
+/* #################################### Estilos Agenda Cita ##################################### */
+
+.agenda__section__contenedor{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+}
+
+.agenda__section__contenedor h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#agenda__section2__contenedor{
+    width: 30%;
+    height: 100%;
+    background-color: #7C436F;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#agenda__section2__contenedor h2{
+    margin-bottom: 15px;
+}
+#agenda__section2__contenedor #agenda__boton{
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
