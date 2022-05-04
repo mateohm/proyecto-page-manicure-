@@ -7,7 +7,17 @@
 
 body{
     background-color:  rgb(246,109,158);
-    background: linear-gradient(0deg, rgba(246,109,158,1) 0%, rgba(255,167,200,1) 31%, rgba(255,248,251,1) 100%);;
+    background: linear-gradient(0deg, rgba(246,109,158,1) 0%, #ffa7c8 31%, rgba(255,248,251,1) 100%);;
+}
+
+/* Estilos de Botstrap corregidos que vienen implementados */
+
+h1{
+    font-weight: 600;
+}
+
+h2{
+    font-weight: 600;
 }
 
 /* Estilos de la barra de navegacion */
@@ -24,20 +34,11 @@ nav ul li a{
     color: #000;
     margin: 20px;
     font-weight: 600;
-    animation-name: secciones_nombres;
-    animation-duration: 2s;
-}
-
-@keyframes secciones_nombres{
-    100%{
-        color: #ff006d;
-    }
 }
 
 nav ul li a:hover{
     border-bottom: 2px solid #000;
     color: #ff006d;
-    transition: 0.1s;
 }
 
 nav ul{
@@ -47,114 +48,6 @@ nav ul{
     font-family:  'EB Garamond', serif;
     text-align: end;
     margin: 10px;
-}
-
-/* Estilos Main */
-
-main{
-    font-family: 'Playfair Display', serif;
-}
-
-/* Estilos Footer */
-
-footer{
-    width: 100%;
-    height: 320px;
-    margin-top: 150px;
-    background: #7C436F;
-}
-
-footer .caja__contenedor__footer{
-    width: 100%;
-    height: 300px;
-    font-family: 'Playfair Display', serif;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-areas: 
-    "div1 div2 div3";
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 300px;
-}
-
-#cajas__footer-margin{
-    grid-area: div1;
-    text-align: center;
-}
-
-#cajas__footer-size{
-    grid-area: div2;
-    text-align: center;
-}
-
-#caja__footer3{
-    grid-area: div3;
-}
-
-footer .caja__contenedor__footer .cajas__footer h4{
-    margin-top: 10px;
-}
-
-#footer__icono__whatsaap{
-    font-size: 40px;
-    margin: 10px;
-}
-
-#footer__icono__whatsaap{
-    margin: 20px;
-}
-
-#cajas__footer-size h3{
-    font-size: 30px;
-    color: #cdb4db;
-}
-
-#cajas__footer-size h4{
-    font-size: 20px;
-    color: #cdb4db;
-    margin-top: 30px;
-}
-
-#lista__footer{
-    margin: 10px;
-    list-style: none;
-}
-
-footer .cajas__footer #lista__footer a{
-    text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-footer .cajas__footer #lista__footer li{
-    margin: 10px 0px 10px 140px;
-}
-
-/* Estilos Contenedor */
-
-#contenedor{
-    display: grid;
-}
-
-/* ############################################################ */
-
-/* Estilos h1 */
-
-#contenedor__icono_whatsaap{
-    position: absolute;
-}
-
-#contenedor__icono_whatsaap #icono__whatsaap{
-    font-size: 50px;
-    margin-left: 15px;
-    margin-top: 10px;
-}
-
-.contenedor__titulo{
-    border-top: solid 2px #000;
-    border-bottom: solid 2px #000;
-    display: flex;
 }
 
 .contenedor__nombre{
@@ -170,23 +63,90 @@ footer .cajas__footer #lista__footer li{
     -webkit-text-fill-color: transparent;
     font-size: 60px;
     font-weight: 600;
-    animation-name: luz;
-    animation-duration: 2s;
 }
 
-@keyframes luz{
-    0%{
-        font-size: 20px;
+/* Barra de navegacion Ocultar */
+
+.nav-ocultar{
+    display: none;
+}
+
+@media (max-width: 480px) {
+    header{
+        display: none;
     }
-    50%{
-        font-size: 45px;
+
+    .nav-ocultar{
+        display: flex;
+        background-color: #FFD1E2 !important;
+        border-top: #000 2px solid;
+        z-index: 1;
     }
-    100%{
-        font-size: 60px;
+
+    .container-fluid{
+        border-bottom: #000 2px solid;
+    }
+
+    .nav-ocultar .container-fluid .collapse ul li a{
+        color: #000;
+    }
+
+    .navbar-dark .navbar-toggler{
+        color: #000;
+        background-color: #FF74A6;
+    }
+
+    .navbar-toggler{
+        font-size: 1.50rem;
+    }
+
+    .color-a{
+        background: linear-gradient(#ff006d, #ffbad4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 50px;
+        font-weight: 900;
+        font-family:  'EB Garamond', serif;
+        margin: auto;
     }
 }
 
-/* ############################# ESTILOS INDEX ####################################*/
+/* Estilos Main */
+
+main{
+    font-family: 'Playfair Display', serif;
+    color: #000;
+}
+
+/* Estilos Footer */
+
+footer{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#contenedor__icono_whatsaap{
+    position: absolute;
+}
+
+#contenedor__icono_whatsaap #icono__whatsaap{
+    font-size: 50px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.contenedor__titulo{
+    border-top: solid 2px #000;
+    border-bottom: solid 2px #000;
+    display: flex;
+}
+
+/* ########################################## ESTILOS INDEX #########################################################*/
 
 /* Estilos  Section Presentacion */
 
@@ -195,24 +155,6 @@ footer .cajas__footer #lista__footer li{
     margin: 80px 50px 150px 50px;
     align-items: center;
     justify-content: center;
-
-}
-
-/* ANIMACIONES */
-
-@keyframes animacion-1{
-    0%{
-        width: 30%;
-        height: 400px;
-    }
-    50%{
-        width: 40%;
-        height: 500px;
-    }
-    100%{
-        width: 50%;
-        height: 500px;
-    }
 }
 
 .caja__inicial{
@@ -227,6 +169,7 @@ footer .cajas__footer #lista__footer li{
     text-align: center;
     margin-top: 20px;
     font-size: 35px;
+    font-weight: 600;
     position: relative;
     top: 100px;
 }
@@ -235,8 +178,6 @@ footer .cajas__footer #lista__footer li{
     width: 50%;
     height: 500px;
     object-fit: cover;
-    animation-name: animacion-1;
-    animation-duration: 2s;
 }
 
 #boton__saber__mas{
@@ -338,6 +279,90 @@ footer .cajas__footer #lista__footer li{
     text-align: center;
 }
 
+/* Responsive 480px */
+
+@media (max-width: 480px) {
+    /* Seccion Presentacion */
+    #imagen__inicial{
+        width: 80%;
+        height: 300px;
+    }
+
+    .contenedor__secction__presentacion{
+        display: block;
+        margin: 90px 50px 60px 50px;
+        height: 500px;
+    }    
+
+    .caja__inicial{
+        position: relative;
+        width: 80%;
+        height: 300px;
+        left: 80px;
+        bottom: 140px;
+    }
+
+    .caja__inicial h1{
+        top: 50px;
+    }
+
+    #boton__saber__mas{
+        top: 85px;
+    }
+    /* Seccion Descripcion */
+    #contenedor__section__descripcion{
+        height: 900px;
+        display: block;
+    }
+
+    #contenedor__h2__p{
+        top: 40px;
+    }
+
+    #contenedor__section__descripcion #caja p{
+        margin: 20px 50px;
+        text-align: center;
+    }
+
+    #caja{
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #contenedor__imagen__descripcion{
+        position: relative;
+        bottom: 340px;
+        width: 0%;
+        height: 0;
+        display: block;
+    }
+
+    #imagen__descripcion{
+        width: 300px;
+        height: 300px;
+        margin-left: 65px;
+    }
+    /* Seccion Cuadros */
+    .cuadros__contenedor{
+        margin-bottom: 0px;
+        height: 100%;
+        padding-bottom: 100px;
+    }
+    
+    .cuadros{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+    }
+    
+    .cuadro{
+        margin: 30px;
+    }
+    
+}
 /* #######################################  Estilos Pagina Servicios ########################################## */
 
 #servicios__h1{
@@ -733,20 +758,18 @@ button{
     margin-top: 50px;
 }
 
-#agenda__section2__contenedor{
-    width: 30%;
+.form__agenda{
+    width: 40%;
     height: 100%;
-    background-color: #7C436F;
     margin: 50px auto;
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #cfbaf0;
+    border-radius: 20px;
+    padding: 50px;
+    font-size: 20px;
 }
 
-#agenda__section2__contenedor h2{
-    margin-bottom: 15px;
+#carouselExampleIndicators{
+    width: 50%;
+    height: 100%;
+    margin: 100px auto;
 }
-#agenda__section2__contenedor #agenda__boton{
-    margin-left: 60px;
-    margin-bottom: 10px;
-}
-

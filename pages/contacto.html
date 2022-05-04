@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../estilos.css">
+    <!-- Tipo de Letra -->
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Lora:ital@1&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <!-- Iconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Mis Estilos -->
+    <link rel="stylesheet" href="../estilos.css">
     <title>Contacto</title>
 </head>
 <body>
@@ -30,63 +35,96 @@
             </ul>
         </nav>
         </header>
-        <main>
-            <section id="contacto__seccion">
-                <h1 id="contacto__h1">Contacto</h1>
-                <div class="contacto__contenedor">
-                    <div>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    </div>
-                    <div>
-                    <p>WhatsApp:+57 3232445546</p>
-                    </div>
-                </div>
-                <div class="contacto__contenedor">
-                    <div>
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p>Mail: luzmy@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contacto__contenedor">
-                    <div>
-                    <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div>
-                    <p>Ubicacion: Bogota - Ciudad Bolivar</p>
-                    </div>
-                </div>
-            </section>
-            <form class="contacto__form">
-                <h4>Dejanos Tus Datos</h4>
-                <input class="contacto__input" type="text" name="nombres" placeholder="Nombre">
-                <input class="contacto__input" type="number" name="apellidos" placeholder="Numero De Contacto">
-                <input class="contacto__input" type="email" name="correo" placeholder="Mail">
-                <textarea class="contacto__input">Mensaje</textarea>
-                <button>Enviar</button>
-            </form>
-        </main>
-    <footer>
-        <div class="caja__contenedor__footer">
-            <div class="cajas__footer" id="cajas__footer-margin">
-                <i class="fa-brands fa-whatsapp" id="footer__icono__whatsaap"></i>
-                <h3>WhatsApp</h3>
-                <h4>+57 302457892</h4>
-            </div>
-            <div class="cajas__footer" id="cajas__footer-size">
-                <h3>Luz</h3>
-                <h4>Manicure y Pedicure<br>Belleza y Vanidad</h4>
-            </div>
-            <div class="cajas__footer"> 
-                <ul id="lista__footer">
-                    <li><a href="./pages/servicio.html">Servicios</a></li>
-                    <li><a href="./pages/galeria.html">Galeria</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li><a href="./pages/agenda-cita.html">Agenda Cita</a></li>
+    <!-- Barra Navegacion Bootstrap Pantallas Puequeñas -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark nav-ocultar">
+        <div class="container-fluid" style="background-color: #FFD1E2;">
+            <a class="navbar-brand color-a" href="../index.html"">Luz</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./servicio.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./agenda-cita.html">Agenda Cita</a>
+                    </li>
                 </ul>
             </div>
         </div>
-    </footer>
+    </nav>
+    <!-- Inicio Main -->
+    <main>
+        <section id="contacto__seccion">
+            <h1 id="contacto__h1">Contacto</h1>
+            <div class="contacto__contenedor">
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div>
+                    <p>WhatsApp:+57 3232445546</p>
+                </div>
+            </div>
+            <div class="contacto__contenedor">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                    <p>Mail: luzmy@gmail.com</p>
+                </div>
+            </div>
+            <div class="contacto__contenedor">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                    <p>Ubicacion: Bogota - Ciudad Bolivar</p>
+                </div>
+            </div>
+        </section>
+        <form class="contacto__form">
+            <h4>Dejanos Tus Datos</h4>
+            <input class="contacto__input" type="text" name="nombres" placeholder="Nombre">
+            <input class="contacto__input" type="number" name="apellidos" placeholder="Numero De Contacto">
+            <input class="contacto__input" type="email" name="correo" placeholder="Mail">
+            <textarea class="contacto__input">Mensaje</textarea>
+            <button>Enviar</button>
+        </form>
+    </main>
+    <!-- ######################## FOOTER BOOTSTRAP#####################-->
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white" style="background-color: #7B569F;">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+            <!-- Section: CTA -->
+            <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                <span class="me-3">¡Agenda tu cita!</span>
+                <button type="button" class="btn btn-outline-light btn-rounded">
+                <a href="#">Agendar</a>
+                </button>
+                </p>
+            </section>
+            <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright: Mateo Hidalgo
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
