@@ -20,6 +20,17 @@ h2{
     font-weight: 600;
 }
 
+/* Estilos Para los h1 */
+
+.estilos_h1{
+    text-align: center;
+    font-size: 45px;
+    margin-top: 50px;
+    background: linear-gradient(#ff006d, #ffbad4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* Estilos de la barra de navegacion */
 
 nav{
@@ -194,6 +205,11 @@ footer a{
     color: #000;
 }
 
+#boton__saber__mas:hover{
+    background-color: #b7b6ff;
+    color: #fff;
+}
+
 /*  Estilos section descripcion */
 
 #contenedor__section__descripcion{
@@ -277,6 +293,31 @@ footer a{
     position: relative;
     font-size: 35px;
     text-align: center;
+}
+
+/* Responsive 1200px */
+
+@media (max-width: 1200px) {
+    /* Seccion Presentacion */
+    #imagen__inicial{
+        height: 450px;
+    }
+
+    .caja__inicial{
+        height: 350px;
+    }
+
+    .caja__inicial h1{
+        top: 80px;
+    }
+
+    #boton__saber__mas{
+        top: 120px;
+    }
+
+    #contenedor__h2__p{
+        top: 60px;
+    }
 }
 
 /* Responsive 480px */
@@ -363,92 +404,163 @@ footer a{
     }
     
 }
+
+/* Responsive 395px */
+
+@media (max-width: 395px) {
+    /* Seccion Presentacion */
+    #imagen__inicial{
+        height: 250px;
+    }
+
+    .contenedor__secction__presentacion{
+        height: 440px;
+    }    
+
+    .caja__inicial{
+        height: 250px;
+        left: 60px;
+        bottom: 120px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .caja__inicial h1{
+        top: 50px;
+        font-size: 25px;
+    }
+
+    #boton__saber__mas{
+        top: 80px;
+        padding: 10px;
+    }
+
+    /* Seccion Descripcion */
+    #contenedor__section__descripcion{
+        height: 1000px;
+    }
+
+    #imagen__descripcion{
+        width: 250px;
+        height: 250px;
+        margin-left: 55px;
+    }
+
+    #contenedor__imagen__descripcion{
+        bottom: 295px;
+    }
+        /* Seccion Cuadros */
+    .cuadros__contenedor{
+        margin-top: 150px;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Seccion Presentacion */
+    #imagen__inicial{
+        width: 100%;
+        height: 220px;
+    }
+
+    .contenedor__secction__presentacion{
+        margin: 90px 50px 30px 15px;
+        width: 80%;
+        height: 500px;
+    }
+
+    .caja__inicial{
+        width: 100%;
+        height: 273px;
+        left: 30px;
+        bottom: 80px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .caja__inicial h1{
+        top: 80px;
+    }
+
+    #boton__saber__mas{
+        top: 120px;
+        padding: 10px;
+    }
+        /* Seccion Descripcion */
+    #contenedor__section__descripcion #caja p{
+        margin: 0px;
+        padding: 15px;
+        width: 100%;
+    }
+
+    #imagen__descripcion{
+        width: 230px;
+        height: 230px;
+        margin-left: 30px;
+    }
+
+}
+
 /* #######################################  Estilos Pagina Servicios ########################################## */
 
-#servicios__h1{
+.grilla_servicios1{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-rows: 500px;
+    grid-template-columns: repeat(2,30%);
+    grid-template-areas: 
+    "tarjeta1 tarjeta2";
+    justify-content: center;
+    margin-top: 100px;
+    grid-gap: 50px;
+}
+
+.grilla_servicios2{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: 500px;
+    grid-template-areas: 
+    "tarjeta3 tarjeta4 tarjeta5";
+    justify-content: center;
+    grid-gap: 30px;
+    margin: 100px 0px 150px 0px;
+}
+
+.grilla_servicios1 div{
     text-align: center;
-    margin-bottom: 50px;
+}
+
+.grilla_servicios2 div{
+    text-align: center;
+}
+
+.tarjeta{
+    background-color: #ef94d5;
+    border-radius: 20px;
+}
+
+.servicios__imagen__tarjeta{
+    width: 100%;
+    height: 40%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+.tarjeta_contenedor_texto{
     margin-top: 50px;
 }
 
-.servicios__contenedor{
-    width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-}
-
-#servicio__imagen1{
-    background-image: url(./imagenes/imagen_servicio.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 30%;
-    border-radius: 200px;
-}
-
-.contenedor__servicio1{
-    text-align: center;
-    width: 50%;
-    margin-left: 120px;
-    background-color: #DC64C1;
-    padding: 20px;
-    border-radius: 50px;
-}
-
-.contenedor__servicio1 h2{
-    margin-bottom: 20px;
-}
-
-.contenedor__servicio2{
-    text-align: center;
-    width: 50%;
-    margin-right: 150px;
-    background-color: #BDE0FE;
-    padding: 20px;
-    border-radius: 50px;
-}
-
-.contenedor__servicio2 h2{
-    margin-bottom: 20px;
-}
-
-#servicio__imagen2{
-    background-image: url(./imagenes/galeria2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 30%;
-    border-radius: 200px;
-}
-
-#servicio__imagen3{
-    background-image: url(./imagenes/galeria1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 30%;
-    border-radius: 200px;
-}
-
-#servicio__imagen4{
-    background-image: url(./imagenes/galeria6.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 400px;
-    width: 30%;
-    border-radius: 200px;
+#tarjeta_1{
+    grid-area: tarjeta1;
 }
 
 /* #######################################  Estilos Pagina Contacto ########################################## */
 
-#contacto__h1{
-    font-size: 30px;
-    text-align: center;
-    margin-top: 50px;
+#calendario{
+    margin-top: 100px;
 }
 
 .contacto__contenedor{
@@ -492,10 +604,10 @@ footer a{
     width: 400px;
     background-color: #ff70a5;
     padding: 30px;
-    margin: auto;
+    margin: 100px auto;
     margin-top: 100px;
     border-radius: 20px;
-    font-family: 'calibri';
+    font-family: 'Playfair Display', serif;
     color: white;
 }
 
@@ -520,6 +632,7 @@ button{
     font-family: 'calibri';
     font-size: 18px;
     color: white;
+    font-family: 'Playfair Display', serif;
 }
 
 .contacto__form p {
@@ -546,15 +659,6 @@ button{
     margin: auto;
     padding-bottom: 15px;
     border-bottom: 2px solid #000;
-}
-
-.galeria__contenedor__h1 h1{
-    text-align: center;
-    font-size: 45px;
-    margin-top: 50px;
-    background: linear-gradient(#ff006d, #ffbad4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .galeria__section__presentacion{
