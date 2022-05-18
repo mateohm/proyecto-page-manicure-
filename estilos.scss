@@ -217,57 +217,48 @@ footer a{
 
 /*  Estilos section descripcion */
 
-#contenedor__section__descripcion{
+.contenedor__section__descripcion{
     width: 90%;
-    height: 600px;
-    display: flex;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    justify-content: center;
-    background-color: #b7b6ff;
+    height: auto;
     margin: auto;
-}
-
-#contenedor__imagen__descripcion{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 50px;
+    background-color: #b7b6ff;
+    display: grid;
+    grid-template-columns: repeat( auto-fit,minmax(500px,1fr));
     align-items: center;
-}
 
-#imagen__descripcion{
-    width: 400px;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 200px;
-    margin-left: 20px;
-}
+    h2{
+        text-align: center;
+        text-decoration-line:underline;
+        color: #ff006d;
+        margin: 20px;
+    }
 
-#caja{
-    width: 50%;
-    height: 100%;
-    margin-left: 50px;
-}
+    p{
+        text-align: center;
+        font-size: 20px;
+    }
 
-#contenedor__h2__p{
-    position: relative;
-    top: 100px;
-}
-
-#contenedor__section__descripcion #caja p{
-    margin: 0px 50px 0px 50px;
-}
-
-#contenedor__section__descripcion #caja h2{
-    margin: 30px;
-    padding-bottom:  15px;
-    text-align: center;
-    color: #ff006d;
-    border-bottom: $negro solid 2px ;
+    #imagen__descripcion{
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 200px;
+        display: block;
+        margin: 0px auto;
+        justify-self: center;
+    }
 }
 
 /* Estilos Section Cuadros  */
+
+@mixin cuadro_diseño{
+    width: 280px;
+    height: 380px;
+    background-color: #FFAFCC;
+    border: 5px #000 solid;
+    border-radius: 25px;
+}
 
 .cuadros__contenedor{
     margin-bottom: 150px;
@@ -276,6 +267,13 @@ footer a{
     height: 650px;
     background-color: $morado_claro;
     padding-top: 60px;
+
+    $lista: (li: 25px);
+    $li: map-get($lista, li);
+
+    li{
+        font-size: $li;
+    }
 }
 
 .cuadros{
@@ -284,14 +282,11 @@ footer a{
     align-items: center;
     width: 100%;
     height: 580px;
+    @extend .h2__cuadro;
 }
 
 .cuadro{
-    width: 280px;
-    height: 380px;
-    background-color: #FFAFCC;
-    border: 5px $negro solid;
-    border-radius: 25px;
+    @include cuadro_diseño;
 }
 
 .h2__cuadro{
@@ -741,21 +736,21 @@ button{
 
 #galeria__imagen2{
     grid-area: img2;
-    background-image: url(./imagenes/galeria2.jpg);
+    background-image: url(./imagenes/galeria6.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #galeria__imagen3{
     grid-area: img3;
-    background-image: url(./imagenes/galeria3.jpg);
+    background-image: url(./imagenes/galeria3.jpeg);
     background-size: cover;
     background-position: center;
 }
 
 #galeria__imagen4{
     grid-area: img4;
-    background-image: url(./imagenes/galeria4.jpg);
+    background-image: url(./imagenes/galeria14.jpg);
     background-size: cover;
     background-position: center;
 }

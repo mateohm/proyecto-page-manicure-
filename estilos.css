@@ -201,54 +201,34 @@ footer a {
 }
 
 /*  Estilos section descripcion */
-#contenedor__section__descripcion {
+.contenedor__section__descripcion {
   width: 90%;
-  height: 600px;
-  display: flex;
-  margin-top: 150px;
-  margin-bottom: 150px;
-  justify-content: center;
-  background-color: #b7b6ff;
+  height: auto;
   margin: auto;
-}
-
-#contenedor__imagen__descripcion {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  padding: 50px;
+  background-color: #b7b6ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   align-items: center;
 }
-
-#imagen__descripcion {
-  width: 400px;
-  height: 400px;
+.contenedor__section__descripcion h2 {
+  text-align: center;
+  text-decoration-line: underline;
+  color: #ff006d;
+  margin: 20px;
+}
+.contenedor__section__descripcion p {
+  text-align: center;
+  font-size: 20px;
+}
+.contenedor__section__descripcion #imagen__descripcion {
+  width: 350px;
+  height: 350px;
   object-fit: cover;
   border-radius: 200px;
-  margin-left: 20px;
-}
-
-#caja {
-  width: 50%;
-  height: 100%;
-  margin-left: 50px;
-}
-
-#contenedor__h2__p {
-  position: relative;
-  top: 100px;
-}
-
-#contenedor__section__descripcion #caja p {
-  margin: 0px 50px 0px 50px;
-}
-
-#contenedor__section__descripcion #caja h2 {
-  margin: 30px;
-  padding-bottom: 15px;
-  text-align: center;
-  color: #ff006d;
-  border-bottom: #000 solid 2px;
+  display: block;
+  margin: 0px auto;
+  justify-self: center;
 }
 
 /* Estilos Section Cuadros  */
@@ -259,6 +239,9 @@ footer a {
   height: 650px;
   background-color: #ddbdfc;
   padding-top: 60px;
+}
+.cuadros__contenedor li {
+  font-size: 25px;
 }
 
 .cuadros {
@@ -277,7 +260,7 @@ footer a {
   border-radius: 25px;
 }
 
-.h2__cuadro {
+.h2__cuadro, .cuadros {
   position: relative;
   font-size: 35px;
   text-align: center;
@@ -712,21 +695,21 @@ button {
 
 #galeria__imagen2 {
   grid-area: img2;
-  background-image: url(./imagenes/galeria2.jpg);
+  background-image: url(./imagenes/galeria6.jpg);
   background-size: cover;
   background-position: center;
 }
 
 #galeria__imagen3 {
   grid-area: img3;
-  background-image: url(./imagenes/galeria3.jpg);
+  background-image: url(./imagenes/galeria3.jpeg);
   background-size: cover;
   background-position: center;
 }
 
 #galeria__imagen4 {
   grid-area: img4;
-  background-image: url(./imagenes/galeria4.jpg);
+  background-image: url(./imagenes/galeria14.jpg);
   background-size: cover;
   background-position: center;
 }
