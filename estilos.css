@@ -18,6 +18,10 @@ h2 {
   font-weight: 600;
 }
 
+li {
+  text-align: start;
+}
+
 /* Estilos Para los h1 */
 .estilos_h1 {
   text-align: center;
@@ -72,12 +76,17 @@ nav ul {
   font-weight: 600;
 }
 
+@media (max-width: 600px) {
+  nav ul li a {
+    font-size: 27px;
+  }
+}
 /* Barra de navegacion Ocultar */
 .nav-ocultar {
   display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 570px) {
   header {
     display: none;
   }
@@ -114,6 +123,11 @@ nav ul {
     font-weight: 900;
     font-family: "EB Garamond", serif;
     margin: auto;
+  }
+}
+@media (max-width: 380px) {
+  .navbar-brand {
+    font-size: 40px;
   }
 }
 /* Estilos Main */
@@ -208,7 +222,8 @@ footer a {
   padding: 50px;
   background-color: #b7b6ff;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 40%));
+  justify-content: space-around;
   align-items: center;
 }
 .contenedor__section__descripcion h2 {
@@ -236,12 +251,9 @@ footer a {
   margin-bottom: 150px;
   margin-top: 150px;
   width: 100%;
-  height: 650px;
+  height: 680px;
   background-color: #ddbdfc;
   padding-top: 60px;
-}
-.cuadros__contenedor li {
-  font-size: 25px;
 }
 
 .cuadros {
@@ -249,7 +261,7 @@ footer a {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  height: 580px;
+  height: 540px;
 }
 
 .cuadro {
@@ -258,11 +270,30 @@ footer a {
   background-color: #FFAFCC;
   border: 5px #000 solid;
   border-radius: 25px;
+  font-size: 25px;
+}
+.cuadro p {
+  margin: 30px 20px;
+}
+.cuadro ul {
+  list-style: none;
+}
+.cuadro li {
+  font-size: 25px;
+  margin: 20px 40px;
+}
+
+.imagen__cuadro {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .h2__cuadro, .cuadros {
   position: relative;
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -287,6 +318,93 @@ footer a {
 
   #contenedor__h2__p {
     top: 60px;
+  }
+
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 60%;
+    grid-gap: 50px;
+  }
+}
+/* Responsive 768px */
+@media (max-width: 768px) {
+  /* Seccion Presentacion */
+  #imagen__inicial {
+    height: 400px;
+  }
+
+  .caja__inicial {
+    padding: 10px;
+  }
+
+  .caja__inicial h1 {
+    top: 50px;
+    font-size: 30px;
+  }
+
+  #boton__saber__mas {
+    top: 100px;
+  }
+
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 80%;
+  }
+
+  /* Seccion Cuadros */
+  .cuadros__contenedor {
+    margin-bottom: 0px;
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
+  .cuadros {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+  }
+
+  .cuadro {
+    margin: 30px;
+  }
+}
+/* Responsive 600px */
+@media (max-width: 600px) {
+  /* Seccion Presentacion */
+  #imagen__inicial {
+    width: 50%;
+    height: 400px;
+  }
+
+  .caja__inicial {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 90%;
+  }
+}
+/* Responsive 600px */
+@media (max-width: 580px) {
+  .contenedor__secction__presentacion {
+    margin: 120px 50px 120px 50px;
+  }
+
+  .caja__inicial h1 {
+    font-size: 30px;
+  }
+
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 95%;
+  }
+  .contenedor__section__descripcion p {
+    margin: 20px;
   }
 }
 /* Responsive 480px */
@@ -319,58 +437,30 @@ footer a {
     top: 85px;
   }
 
-  /* Seccion Descripcion */
-  #contenedor__section__descripcion {
-    height: 900px;
-    display: block;
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 40%));
   }
-
-  #contenedor__h2__p {
-    top: 40px;
+  .contenedor__section__descripcion h2 {
+    font-size: 30px;
   }
-
-  #contenedor__section__descripcion #caja p {
-    margin: 20px 50px;
-    text-align: center;
+  .contenedor__section__descripcion p {
+    margin: 10px 50px;
   }
-
-  #caja {
-    width: 100%;
-    margin-left: 0px;
+}
+/* Responsive 450px */
+@media (max-width: 450px) {
+  .contenedor__section__descripcion {
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 40%));
   }
-
-  #contenedor__imagen__descripcion {
-    position: relative;
-    bottom: 340px;
-    width: 0%;
-    height: 0;
-    display: block;
+  .contenedor__section__descripcion p {
+    margin: 10px 50px;
   }
-
-  #imagen__descripcion {
-    width: 300px;
-    height: 300px;
-    margin-left: 65px;
-  }
-
-  /* Seccion Cuadros */
-  .cuadros__contenedor {
-    margin-bottom: 0px;
-    height: 100%;
-    padding-bottom: 100px;
-  }
-
-  .cuadros {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-  }
-
-  .cuadro {
-    margin: 30px;
+  .contenedor__section__descripcion #imagen__descripcion {
+    height: 250px;
+    width: 250px;
   }
 }
 /* Responsive 413px */
@@ -390,25 +480,16 @@ footer a {
   }
 
   .caja__inicial h1 {
-    top: 80px;
+    top: 40px;
     font-size: 30px;
   }
 
   #boton__saber__mas {
-    top: 130px;
-  }
-
-  /* Seccion Descripcion */
-  #contenedor__section__descripcion {
-    height: 1000px;
-  }
-
-  #imagen__descripcion {
-    margin-left: 37px;
+    top: 80px;
   }
 }
-/* Responsive 395px */
-@media (max-width: 395px) {
+/* Responsive 400px */
+@media (max-width: 400px) {
   /* Seccion Presentacion */
   #imagen__inicial {
     height: 250px;
@@ -428,34 +509,23 @@ footer a {
   }
 
   .caja__inicial h1 {
-    top: 70px;
+    top: 40px;
     font-size: 25px;
   }
 
   #boton__saber__mas {
-    top: 100px;
+    top: 70px;
     font-size: 18px;
     padding: 10px;
   }
 
-  /* Seccion Descripcion */
-  #contenedor__section__descripcion {
-    height: 1000px;
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 40%));
   }
-
-  #imagen__descripcion {
-    width: 250px;
-    height: 250px;
-    margin-left: 55px;
-  }
-
-  #contenedor__imagen__descripcion {
-    bottom: 295px;
-  }
-
-  /* Seccion Cuadros */
-  .cuadros__contenedor {
-    margin-top: 150px;
+  .contenedor__section__descripcion p {
+    margin: 0;
+    font-size: 20px;
   }
 }
 @media (max-width: 320px) {
@@ -473,7 +543,7 @@ footer a {
 
   .caja__inicial {
     width: 100%;
-    height: 273px;
+    height: 250px;
     left: 30px;
     bottom: 80px;
     padding-left: 10px;
@@ -481,25 +551,25 @@ footer a {
   }
 
   .caja__inicial h1 {
-    top: 80px;
+    top: 40px;
   }
 
   #boton__saber__mas {
-    top: 120px;
+    top: 80px;
     padding: 10px;
   }
 
-  /* Seccion Descripcion */
-  #contenedor__section__descripcion #caja p {
-    margin: 0px;
-    padding: 15px;
-    width: 100%;
+  /*  Estilos section descripcion */
+  .contenedor__section__descripcion {
+    width: 95%;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 40%));
   }
-
-  #imagen__descripcion {
-    width: 230px;
-    height: 230px;
-    margin-left: 30px;
+  .contenedor__section__descripcion p {
+    margin: 10px 0px;
+  }
+  .contenedor__section__descripcion #imagen__descripcion {
+    width: 220px;
+    height: 220px;
   }
 }
 /* #######################################  Estilos Pagina Servicios ########################################## */
@@ -508,23 +578,22 @@ footer a {
   height: auto;
   display: grid;
   grid-template-rows: 500px;
-  grid-template-columns: repeat(2, 30%);
-  grid-template-areas: "tarjeta1 tarjeta2";
+  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
   justify-content: center;
   margin-top: 100px;
-  grid-gap: 50px;
+  grid-gap: 30px;
 }
 
 .grilla_servicios2 {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: 500px;
-  grid-template-areas: "tarjeta3 tarjeta4 tarjeta5";
+  grid-template-rows: repeat(2, 500px);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
   justify-content: center;
   grid-gap: 30px;
-  margin: 100px 0px 150px 0px;
+  margin: 30px 0px 150px 0px;
 }
 
 .grilla_servicios1 div {
@@ -551,16 +620,12 @@ footer a {
 .tarjeta_contenedor_texto {
   margin-top: 50px;
 }
-
-#tarjeta_1 {
-  grid-area: tarjeta1;
+.tarjeta_contenedor_texto p {
+  margin: 0px 20px;
 }
 
+/* Responsive 600px */
 /* #######################################  Estilos Pagina Contacto ########################################## */
-#calendario {
-  margin-top: 100px;
-}
-
 .contacto__contenedor {
   width: 80%;
   height: 100px;
@@ -580,14 +645,6 @@ footer a {
 .contacto__contenedor div i {
   font-size: 50px;
   margin-right: 40px;
-}
-
-#contacto__form {
-  width: 40%;
-  height: 400px;
-  background-color: #ff70a5;
-  text-align: center;
-  margin: 150px auto;
 }
 
 #contacto__form__h2 {
@@ -650,7 +707,24 @@ button {
   text-decoration: underline;
 }
 
-/* #################################### Estilos Galeria ################################## */
+/* Responsive 480px */
+@media (max-width: 480px) {
+  .contacto__contenedor {
+    padding: 30px;
+  }
+}
+/* Responsive 320px */
+@media (max-width: 320px) {
+  .contacto__contenedor {
+    width: 100%;
+    padding: 70px 30px;
+  }
+
+  .contacto__form {
+    width: 300px;
+  }
+}
+/* #################################### Estilos Galeria ########################################## */
 .galeria__contenedor__h1 {
   width: 50%;
   margin: auto;
@@ -679,6 +753,7 @@ button {
   justify-content: center;
   grid-template-areas: "img1 img2 img3 img4";
   grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 20%));
   grid-template-rows: 300px;
   grid-column-gap: 35px;
   position: relative;
@@ -758,7 +833,7 @@ button {
   display: grid;
   justify-content: center;
   grid-template-areas: "img5 img6 img7" "img8 img9 img10" "img11 img12 img14";
-  grid-template-columns: repeat(3, 30%);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
   grid-template-rows: 300px 300px 300px;
   grid-gap: 10px;
   margin-left: 10px;
@@ -840,7 +915,45 @@ button {
   text-align: center;
 }
 
+/* Responsive 768px */
+@media (max-width: 768px) {
+  .galeria__section__presentacion article {
+    left: 100px;
+  }
+}
+/* Responsive 600px */
+@media (max-width: 600px) {
+  .galeria__section__contenedor {
+    width: 90%;
+    height: auto;
+    margin: 120px auto;
+    background-color: #A86BFF;
+  }
+}
+/* Responsive 480px */
+@media (max-width: 480px) {
+  .galeria__section__presentacion article {
+    left: 70px;
+  }
+
+  .galeria__section__contenedor {
+    margin: 200px auto;
+  }
+}
+/* Responsive 320px */
+@media (max-width: 320px) {
+  .galeria__section__contenedor {
+    margin: 600px auto 0 auto;
+    width: 100%;
+  }
+}
 /* #################################### Estilos Agenda Cita ##################################### */
+#calendario {
+  margin-top: 100px;
+  width: 80%;
+  height: 600px;
+}
+
 .agenda__section__contenedor {
   width: 80%;
   height: 100%;
@@ -868,6 +981,29 @@ button {
   width: 50%;
   height: 100%;
   margin: 100px auto;
+}
+
+/* Responsive 600px */
+@media (max-width: 600px) {
+  #calendario {
+    height: 400px;
+  }
+}
+/* Responsive 480px */
+@media (max-width: 480px) {
+  .form__agenda {
+    width: 70%;
+  }
+}
+/* Responsive 320px */
+@media (max-width: 320px) {
+  #calendario {
+    width: 100%;
+  }
+
+  .form__agenda {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */
