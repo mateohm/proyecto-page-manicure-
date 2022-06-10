@@ -670,7 +670,7 @@ footer a{
     grid-template-columns: repeat(auto-fit,minmax(300px, 30%));
     justify-content: center;
     grid-gap: 30px;
-    margin: 30px 0px 150px 0px;
+    margin: 30px 0px 100px 0px;
 }
 
 .grilla_servicios1 div{
@@ -684,6 +684,11 @@ footer a{
 .tarjeta{
     background-color: #ef94d5;
     border-radius: 20px;
+}
+
+.tarjeta:hover{
+    transform: translateY(-4%);
+    transition: 0.1s;
 }
 
 .servicios__imagen__tarjeta{
@@ -702,16 +707,29 @@ footer a{
     }
 }
 
+.icono__marquee{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+marquee{
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
 /* Responsive 600px */
 
 @media (max-width: 600px) {
 }
+
 /* #######################################  Estilos Pagina Contacto ########################################## */
 
 .contacto__contenedor{
     width: 80%;
-    height: 100px;
+    height: auto;
     background-color: #b7b6ff;
+    padding: 25px;
     margin: 50px auto;
     border: 2px #000 solid;
     display: flex;
@@ -737,8 +755,10 @@ footer a{
     margin-top: 20px;
 }
 
+// Estilos Formulario
+
 .contacto__form {
-    width: 400px;
+    width: 40%;
     background-color: #ff70a5;
     padding: 30px;
     margin: 100px auto;
@@ -746,10 +766,14 @@ footer a{
     border-radius: 20px;
     font-family: 'Playfair Display', serif;
     color: white;
+
+    textarea{
+        resize: none;
+    }
 }
 
 .contacto__form h4 {
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -789,26 +813,49 @@ button{
     text-decoration: underline;
 }
 
+/* Responsive 768px */
+
+@media (max-width: 768px) {
+    .contacto__form {
+        width: 70%;
+    }
+}
+
+/* Responsive 600px */
+
+@media (max-width: 600px) {
+
+    .contacto__contenedor{
+        width: 90%;
+    }
+}
+
 /* Responsive 480px */
 
 @media (max-width: 480px) {
-    .contacto__contenedor{
-    padding: 30px;
+
+    #contacto__seccion{
+        margin-top: 80px;
+
+        h1{
+            font-size: 38px;
+        }
     }
-}
 
-/* Responsive 320px */
-
-@media (max-width: 320px) {
     .contacto__contenedor{
         width: 100%;
-        padding: 70px 30px;
-        }
-    
+    }
+
     .contacto__form {
-        width: 300px;
+        width: 100%;
+        border-radius: 0;
+
+        h4{
+            margin-bottom: 40px;
+        }
     }
 }
+
 /* #################################### Estilos Galeria ########################################## */
 
 .galeria__contenedor__h1{
@@ -864,14 +911,14 @@ button{
 
 #galeria__imagen3{
     grid-area: img3;
-    background-image: url(./imagenes/galeria3.jpeg);
+    background-image: url(./imagenes/galeria3.jpg);
     background-size: cover;
     background-position: center;
 }
 
 #galeria__imagen4{
     grid-area: img4;
-    background-image: url(./imagenes/galeria14.jpg);
+    background-image: url(./imagenes/galeria4.jpg);
     background-size: cover;
     background-position: center;
 }
