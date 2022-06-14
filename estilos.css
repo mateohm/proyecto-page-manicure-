@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ################################## Estilos Generales para todas las paginas #######################################*/
 * {
   padding: 0;
@@ -601,34 +602,39 @@ footer a {
   }
 }
 /* #######################################  Estilos Pagina Servicios ########################################## */
-.grilla_servicios1 {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-rows: 500px;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
-  justify-content: center;
-  margin-top: 100px;
-  grid-gap: 30px;
+.margin__h1 {
+  margin-bottom: 100px;
 }
 
-.grilla_servicios2 {
+.grilla_servicios {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-rows: repeat(2, 500px);
+  grid-template-rows: repeat(4, minmax(300px, 500px));
   grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
   justify-content: center;
   grid-gap: 30px;
   margin: 30px 0px 100px 0px;
 }
-
-.grilla_servicios1 div {
-  text-align: center;
+.grilla_servicios h3 {
+  font-size: 35px;
+  margin-bottom: 35px;
+}
+.grilla_servicios a {
+  text-decoration: none;
+  color: #fff6f9;
+  font-size: 25px;
+  padding: 5px;
+  border-bottom: solid #72ddf7 2px;
+}
+.grilla_servicios a:hover {
+  background-color: #25D366;
+  border-color: #25D366;
+  border-radius: 10px;
+  transition: 0.4s;
 }
 
-.grilla_servicios2 div {
+.grilla_servicios div {
   text-align: center;
 }
 
@@ -668,7 +674,24 @@ marquee {
   border-bottom: 2px solid #000;
 }
 
+/* Responsive 768px */
+@media (max-width: 768px) {
+  .grilla_servicios {
+    grid-template-rows: repeat(6, 500px);
+  }
+}
 /* Responsive 600px */
+@media (max-width: 600px) {
+  .grilla_servicios {
+    grid-template-rows: repeat(11, 500px);
+  }
+}
+@media (max-width: 480px) {
+  .margin__h1 {
+    margin: 80px 0px;
+    font-size: 36px;
+  }
+}
 /* #######################################  Estilos Pagina Contacto ########################################## */
 .contacto__contenedor {
   width: 80%;
@@ -799,7 +822,7 @@ button {
 .galeria__section__presentacion {
   position: relative;
   width: 100%;
-  height: 620px;
+  height: 450px;
   margin-top: 80px;
   box-sizing: border-box;
 }
@@ -816,7 +839,6 @@ button {
   display: grid;
   justify-content: center;
   grid-template-areas: "img1 img2 img3 img4";
-  grid-template-columns: repeat(4, 20%);
   grid-template-columns: repeat(auto-fit, minmax(200px, 20%));
   grid-template-rows: 300px;
   grid-column-gap: 35px;
@@ -853,6 +875,20 @@ button {
   background-position: center;
 }
 
+.galeria__div__grid:hover {
+  transform: translateY(-4%);
+  transition: 0.1s;
+}
+
+.galeria__texto {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  background-color: #72ddf7;
+  padding: 20px;
+  font-size: 20px;
+}
+
 .galeria__section__presentacion article {
   width: 70%;
   height: 180px;
@@ -882,7 +918,7 @@ button {
 .galeria__section__contenedor {
   width: 90%;
   height: auto;
-  margin: 0 auto;
+  margin: 100px auto;
   background-color: #A86BFF;
 }
 
@@ -896,12 +932,12 @@ button {
   height: auto;
   display: grid;
   justify-content: center;
-  grid-template-areas: "img5 img6 img7" "img8 img9 img10" "img11 img12 img14";
+  grid-template-areas: "img5 img6 img7" "img8 img9 img10" "img11 img12 img13";
   grid-template-columns: repeat(auto-fit, minmax(300px, 30%));
   grid-template-rows: 300px 300px 300px;
   grid-gap: 10px;
-  margin-left: 10px;
   box-sizing: border-box;
+  padding-bottom: 50px;
 }
 
 #galeria__imagen5 {
@@ -913,7 +949,7 @@ button {
 
 #galeria__imagen6 {
   grid-area: img6;
-  background-image: url(./imagenes/galeria6.jpg);
+  background-image: url(./imagenes/galeria13.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -927,21 +963,21 @@ button {
 
 #galeria__imagen8 {
   grid-area: img8;
-  background-image: url(./imagenes/galeria8.jpg);
+  background-image: url(./imagenes/cuadro_3.jpg);
   background-position: center;
   background-size: cover;
 }
 
 #galeria__imagen9 {
   grid-area: img9;
-  background-image: url(./imagenes/galeria9.jpg);
+  background-image: url(./imagenes/uña_individual.jpg);
   background-position: center;
   background-size: cover;
 }
 
 #galeria__imagen10 {
   grid-area: img10;
-  background-image: url(./imagenes/galeria10.jpg);
+  background-image: url(./imagenes/uñas_polish.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -955,23 +991,22 @@ button {
 
 #galeria__imagen12 {
   grid-area: img12;
-  background-image: url(./imagenes/galeria12.jpg);
+  background-image: url(./imagenes/servicio_semipermanente.jpg);
   background-position: center;
   background-size: cover;
 }
 
 #galeria__imagen13 {
   grid-area: img13;
-  background-image: url(./imagenes/galeria13.jpg);
+  background-image: url(./imagenes/imagen_servicio1.jpg);
   background-position: center;
   background-size: cover;
 }
 
-#galeria__imagen14 {
-  grid-area: img14;
-  background-image: url(./imagenes/galeria14.jpg);
-  background-position: center;
-  background-size: cover;
+.divs:hover {
+  -webkit-box-shadow: inset 2px 10px 298px -52px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 2px 10px 298px -52px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 2px 10px 298px -52px rgba(0, 0, 0, 0.75);
 }
 
 .galeria__section__contenedor h2 {
@@ -979,47 +1014,124 @@ button {
   text-align: center;
 }
 
-/* Responsive 768px */
-@media (max-width: 768px) {
-  .galeria__section__presentacion article {
-    left: 100px;
+/* Responsive 1023px */
+@media (max-width: 1023px) {
+  .contenedor__grid__divs {
+    grid-template-areas: "img5 img6" "img7 img8" "img9 img10" "img11 img12" "img13 img13";
+    grid-template-rows: repeat(5, 300px);
+    padding-bottom: 40px;
+  }
+}
+/* Responsive 904px */
+@media (max-width: 904px) {
+  .galeria__section__presentacion {
+    height: 800px;
+  }
+
+  .contenedor__galeria__grid {
+    grid-template-areas: "img1 img2" "img3 img4";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 40%));
+    grid-template-rows: repeat(2, 300px);
+    grid-row-gap: 40px;
+  }
+}
+/* Responsive 700px */
+@media (max-width: 700px) {
+  .contenedor__grid__divs {
+    grid-template-areas: "img5" "img6" "img7" "img8" "img9" "img10" "img11" "img12" "img13";
+    grid-template-rows: repeat(9, 300px);
+    padding-bottom: 40px;
   }
 }
 /* Responsive 600px */
 @media (max-width: 600px) {
+  .galeria__contenedor__h1 {
+    width: 70%;
+  }
+  .galeria__contenedor__h1 h1 {
+    font-size: 40px;
+  }
+
   .galeria__section__contenedor {
     width: 90%;
-    height: auto;
     margin: 120px auto;
-    background-color: #A86BFF;
   }
 }
 /* Responsive 480px */
 @media (max-width: 480px) {
-  .galeria__section__presentacion article {
-    left: 70px;
+  .galeria__contenedor__h1 {
+    margin-top: 100px;
+    width: 80%;
+  }
+  .galeria__contenedor__h1 h1 {
+    font-size: 35px;
+  }
+
+  #galeria__fondo__decoracion {
+    height: 800px;
+    background-color: #A86BFF;
+  }
+
+  .galeria__section__presentacion {
+    height: 1500px;
+  }
+
+  .contenedor__galeria__grid {
+    grid-template-areas: "img1" "img2" "img3" "img4";
+    grid-template-columns: repeat(auto-fit, minmax(200px, 80%));
+    grid-template-rows: repeat(4, 300px);
+    grid-row-gap: 40px;
+    bottom: 730px;
+  }
+}
+/* Responsive 350px */
+@media (max-width: 350px) {
+  .galeria__contenedor__h1 {
+    width: 90%;
   }
 
   .galeria__section__contenedor {
-    margin: 200px auto;
-  }
-}
-/* Responsive 320px */
-@media (max-width: 320px) {
-  .galeria__section__contenedor {
-    margin: 600px auto 0 auto;
     width: 100%;
   }
 }
 /* #################################### Estilos Agenda Cita ##################################### */
-#calendario {
-  margin-top: 100px;
+.agendar__cita {
   width: 80%;
-  height: 600px;
+  height: auto;
+  background-color: #749eff;
+  margin: 100px auto;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+  border: solid #5488FF;
+  text-align: center;
+}
+.agendar__cita a {
+  text-decoration: none;
+  color: #0FFF00;
+  margin-left: 10px;
+  padding: 10px;
+}
+.agendar__cita a:hover {
+  color: #fff;
+  border-radius: 10px;
+  background-color: #0FFF00;
+  transition: 0.4s;
+}
+.agendar__cita #icono__reservar {
+  font-size: 50px;
+  position: relative;
+  top: 10px;
+  color: #0FFF00;
+}
+.agendar__cita img {
+  width: 30%;
 }
 
 .agenda__section__contenedor {
-  width: 80%;
+  width: 100%;
   height: 100%;
   margin: auto;
 }
@@ -1028,17 +1140,19 @@ button {
   text-align: center;
   font-size: 30px;
   margin-bottom: 50px;
-  margin-top: 50px;
 }
 
 .form__agenda {
   width: 40%;
   height: 100%;
-  margin: 50px auto;
+  margin: 50px auto 150px auto;
   background-color: #cfbaf0;
   border-radius: 20px;
   padding: 50px;
   font-size: 20px;
+}
+.form__agenda textarea {
+  resize: none;
 }
 
 #carouselExampleIndicators {
@@ -1047,16 +1161,54 @@ button {
   margin: 100px auto;
 }
 
+/* Responsive 1900px */
+@media (max-width: 1900px) {
+  .agendar__cita {
+    flex-direction: column;
+  }
+}
 /* Responsive 600px */
 @media (max-width: 600px) {
-  #calendario {
-    height: 400px;
+  h2 {
+    margin: 0px 0px;
+  }
+
+  .agendar__cita img {
+    width: 60%;
+  }
+
+  .form__agenda {
+    width: 70%;
+    resize: none;
   }
 }
 /* Responsive 480px */
 @media (max-width: 480px) {
+  h2 {
+    margin: 0px 0px;
+  }
+
+  .agendar__cita img {
+    width: 80%;
+  }
+
   .form__agenda {
     width: 70%;
+  }
+}
+/* Responsive 400px */
+@media (max-width: 400px) {
+  .agenda__section__contenedor h1 {
+    margin-top: 100px;
+    font-size: 35px;
+  }
+
+  .agendar__cita {
+    width: 100%;
+  }
+
+  .form__agenda {
+    width: 80%;
   }
 }
 /* Responsive 320px */
