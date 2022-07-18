@@ -991,7 +991,7 @@ button {
 
 #galeria__imagen12 {
   grid-area: img12;
-  background-image: url(./imagenes/servicio_semipermanente.jpg);
+  background-image: url(./imagenes/galeria8.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1014,12 +1014,30 @@ button {
   text-align: center;
 }
 
+.galeeria__section__videos {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px;
+}
+
+video:hover {
+  transition: 1s;
+  height: 550px;
+}
+
 /* Responsive 1023px */
 @media (max-width: 1023px) {
   .contenedor__grid__divs {
     grid-template-areas: "img5 img6" "img7 img8" "img9 img10" "img11 img12" "img13 img13";
     grid-template-rows: repeat(5, 300px);
     padding-bottom: 40px;
+  }
+
+  .galeeria__section__videos {
+    flex-direction: column;
+  }
+  .galeeria__section__videos video {
+    margin: 20px;
   }
 }
 /* Responsive 904px */
