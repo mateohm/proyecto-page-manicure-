@@ -1206,6 +1206,17 @@ button{
     }
 }
 
+@media (max-width: 480px) {
+    .galeeria__section__videos{
+        flex-flow: column;
+        width: 100%;
+        margin: 50px 0px;
+        video{
+            margin: 20px;
+        }
+    }
+}
+
 @media (max-width: 400px) {
     .galeeria__section__videos{
         flex-flow: column;
